@@ -1,0 +1,32 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+autopep8 = "*"
+
+[packages]
+requests = "*"
+flask = "*"
+flask-wtf = "*"
+python-interfaces = "*"
+python-dotenv = "*"
+flask-scss = "*"
+pytest = "*"
+more-itertools = "*"
+mypy = "*"
+python-dateutil = "*"
+autopep8 = "*"
+flask-peewee = "*"
+email-validator = "*"
+psycopg2-binary = "*"
+pyjwt = "*"
+flask-swagger-ui = "*"
+coverage = "*"
+pycron = "*"
+pydantic = "*"
+pyhumps = "*"
+
+[requires]
+python_version = "3.9"

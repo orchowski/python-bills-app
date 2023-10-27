@@ -1,0 +1,20 @@
+post:
+  tags:
+    - "accounting_documents"
+  operationId: "addResource"
+  responses:
+    "201":
+      description: "Resource uploaded: id returned"
+      schema:
+        type: object
+        properties:
+          resourceId:
+            type: string
+            example: 123e4567-e89b-12d3-a456-426614174000
+  consumes:
+    - multipart/form-data
+  parameters:
+    - in: formData
+      name: file
+      type: file
+      description: The file to upload.

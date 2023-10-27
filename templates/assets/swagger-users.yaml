@@ -1,0 +1,40 @@
+post:
+  tags:
+    - "users"
+  summary: "Adds a new user"
+  description: ""
+  operationId: "addUser"
+  consumes:
+    - "application/json"
+  parameters:
+    - in: "body"
+      name: "body"
+      description: "Pet object that needs to be added to the store"
+      required: true
+      schema:
+        $ref: "swagger-user-models.yaml#/RegisterUser"
+  responses:
+    "200":
+      description: "Invalid input"
+      schema:
+        type: object
+        properties:
+          message:
+            type: "string"
+            example: "New user created!"
+get:
+  tags:
+    - "users"
+  operationId: "getAllUsers"
+  security:
+    - JWT: [ ]
+  responses:
+    "200":
+      descrpition: "List of registered users"
+      schema:
+        type: object
+        properties:
+          users:
+            type: "array"
+            items:
+              $ref: "swagger-user-models.yaml#/User"

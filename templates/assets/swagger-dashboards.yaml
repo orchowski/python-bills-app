@@ -1,0 +1,11 @@
+get:
+  tags:
+    - "dashboards"
+  operationId: "getMainDashboard"
+  security:
+    - JWT: [ ]
+  responses:
+    "200":
+      descrpition: "Gets main dashboard for wallet"
+      schema:
+        $ref: "swagger-dashboards-models.yaml#/MainDashboard"

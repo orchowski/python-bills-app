@@ -1,0 +1,11 @@
+type: "object"
+properties:
+  pageSize:
+    type: int
+    example: 10
+  page:
+    type: int
+    example: 2
+  totalPages:
+    type: int
+    example: 12

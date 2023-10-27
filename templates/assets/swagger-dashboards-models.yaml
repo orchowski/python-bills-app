@@ -1,0 +1,51 @@
+MainDashboard:
+  type: object
+  properties:
+    commitmentsUpcoming:
+      type: array
+      items:
+        type: object
+        properties:
+            deadline:
+              type: string
+              example: "Tue, 01 Feb 2022 00:00:00 GMT"
+            id:
+              type: string
+              example: "154c465c-cf3a-427f-835e-70e641539943"
+            money:
+              type: string
+              example: 123
+            title:
+              type: string
+              example: house rent
+            unit:
+              type: string
+              example: USD
+    needsActionLog:
+      type: array
+      items:
+          type: object
+          properties:
+            correlatedId:
+              type: string
+              example: "d5a70b7a-a486-4d7e-b92e-eb487afebc8f"
+            occurrenceData:
+              type: string
+              example: "Sat, 29 Jan 2022 21:36:59 GMT"
+            title:
+              type: string
+              example: "INVOICE_WAITS_FOR_PAYMENT : that will be translated with adding {}"
+    paymentsLog:
+      type: array
+      items:
+          type: object
+          properties:
+            correlatedId:
+              type: string
+              example: "d5a70b7a-a486-4d7e-b92e-eb487afebc8f"
+            occurrenceData:
+              type: string
+              example: "Sat, 29 Jan 2022 21:36:59 GMT"
+            title:
+              type: string
+              example: "PAYMENT_FINISHED : that will be translated with adding {}"

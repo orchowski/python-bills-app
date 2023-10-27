@@ -1,0 +1,28 @@
+User:
+  type: "object"
+  required:
+    - "email"
+    - "password"
+    - "publicId"
+  properties:
+    email:
+      type: "string"
+      example: "alex@gmail.com"
+    password:
+      type: "string"
+      example: "ayipwzqp"
+    publicId:
+      type: "string"
+      example: "3a5f61e7-31c0-4e50-8969-3e24bd2c07fc"
+RegisterUser:
+  type: "object"
+  required:
+    - "email"
+    - "password"
+  properties:
+    email:
+      type: "string"
+      example: "alex@gmail.com"
+    password:
+      type: "string"
+      example: "ayipwzqp"

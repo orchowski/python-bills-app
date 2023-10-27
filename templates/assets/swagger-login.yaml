@@ -1,0 +1,12 @@
+get:
+  tags:
+    - "users"
+  security:
+    - BASIC: [ ]
+  summary: "Login"
+  operationId: "login"
+  produces:
+    - "application/json"
+  responses:
+    "200":
+      description: "successful operation"

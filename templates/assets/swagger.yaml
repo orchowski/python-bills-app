@@ -1,0 +1,32 @@
+swagger: "2.0"
+info:
+  description: "This is billing app"
+  version: "1.0.0"
+  title: "Swagger Billing app"
+tags:
+  - name: "users"
+    description: "Basic user management"
+securityDefinitions:
+  JWT:
+    type: apiKey
+    name: x-access-token
+    in: header
+  BASIC:
+    type: basic
+paths:
+  /api/login:
+    $ref: swagger-login.yaml
+  /api/user:
+    $ref: swagger-users.yaml
+  /api/user/{public_id}:
+    $ref: swagger-user-pubid.yaml
+  /api/dashboards/main:
+    $ref: swagger-dashboards.yaml
+  /api/commitments:
+    $ref: swagger-commitments.yaml
+  /api/accounting_documents/resources:
+    $ref: swagger-accounting-documents-resources.yaml
+  /api/accounting_documents/invoices:
+    $ref: swagger-accounting-documents-invoices.yaml
+  /api/accounting_documents/invoices/{invoice_id}:
+    $ref: swagger-accounting-documents-invoice.yaml

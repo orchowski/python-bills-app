@@ -1,0 +1,120 @@
+
+get:
+  tags:
+    - "commitments"
+  operationId: "getCommitments"
+#  security:
+#    - JWT: [ ]
+  responses:
+    "200":
+      descrpition: "List of commitments"
+      schema:
+        type: object
+        properties:
+          pagination:
+            $ref: "schemas/pagination.yaml"
+          data:
+            type: "array"
+            items:
+              $ref: "swagger-commitment-models.yaml#/CommitmentListItem"
+post:
+  tags:
+    - "commitments"
+  operationId: "create commitment"
+  responses:
+    "200":
+      description: "Commitment created: id returned"
+      schema:
+        type: object
+        properties:
+          commitmentId:
+            type: string
+            example: 123e4567-e89b-12d3-a456-426614174000
+    "400":
+      description: "Bad request"
+  consumes:
+    - "application/json"
+  parameters:
+    - in: "body"
+      name: "body"
+      description: "Add commitment request body"
+      schema:
+        type: object
+        required: true
+        properties:
+          amount:
+            type: float
+            example: 100.99
+          unit:
+            type: string
+            example: USD
+          title:
+            type: string
+            example: flat rent
+          repeatPeriod:
+            type: string
+            example: "DAY|WEEK|MONTH"
+          description:
+            type: string
+            example: this is for the flat in my own city
+          startDate:
+            type: string
+            example: "2022-02-01"
+          everyPeriod:
+            type: int
+            example: 1
+          active:
+            type: bool
+            example: true
+put:
+  tags:
+    - "commitments"
+  operationId: "update commitment"
+  responses:
+    "204":
+      description: "Commitment updated"
+    "400":
+      description: "Bad request"
+  consumes:
+    - "application/json"
+  parameters:
+    - in: "body"
+      name: "body"
+      description: "Add commitment request body"
+      required:
+        - "commitmentId"
+        - "amount"
+        - "unit"
+        - "title"
+        - "repeatPeriod"
+      schema:
+        type: object
+        required: true
+        properties:
+          commitmentId:
+            type: string
+            example: 123e4567-e89b-12d3-a456-426614174000
+          amount:
+            type: float
+            example: 100.99
+          unit:
+            type: string
+            example: USD
+          title:
+            type: string
+            example: flat rent
+          repeatPeriod:
+            type: string
+            example: "DAY|WEEK|MONTH"
+          description:
+            type: string
+            example: this is for the flat in my own city
+          startDate:
+            type: string
+            example: "2022-02-01"
+          everyPeriod:
+            type: int
+            example: 1
+          active:
+            type: bool
+            example: true

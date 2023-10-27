@@ -1,0 +1,90 @@
+InvoiceIssuer:
+  type: "object"
+  properties:
+    id:
+      type: string
+      required: True
+      example: "123e4567-e89b-12d3-a456-426614174000"
+    name:
+      type: string
+      required: True
+      example: "Carpendev sp. z o.o."
+
+
+AddInvoiceRequest:
+  type: "object"
+  properties:
+    moneyGross:
+      type: float
+      required: True
+      example: 2022.11
+    unit:
+      type: string
+      required: True
+      example: PLN
+    invoiceNumber:
+      type: string
+      required: True
+      example: FZ-asdasd-29291
+    issuedOn:
+      type: string
+      required: True
+      example: "2022-01-01"
+    paidOff:
+      type: boolean
+      required: True
+      example: true
+    deadline:
+      type: string
+      required: False
+      example: "2022-01-14"
+    issuer:
+      required: False
+      $ref: "swagger-accounting-documents-models.yaml#/InvoiceIssuer"
+    originator:
+      type: string
+      required: False
+      example: "Seba"
+    taxMoney:
+      type: float
+      required: False
+      example: 465.0853
+    documentResource:
+      type: string
+      required: False
+      example: "123e4567-e89b-12d3-a456-426614174000"
+
+ChangeInvoiceDetails:
+  type: object
+  properties:
+    unit:
+      type: string
+      required: True
+      example: PLN
+    invoiceNumber:
+      type: string
+      required: True
+      example: FZ-asdasd-29291
+    issuedOn:
+      type: string
+      required: True
+      example: "2022-01-01"
+    paidOff:
+      type: boolean
+      required: True
+      example: true
+    deadline:
+      type: string
+      required: False
+      example: "2022-01-14"
+    issuer:
+      required: False
+      $ref: "swagger-accounting-documents-models.yaml#/InvoiceIssuer"
+    originator:
+      type: string
+      required: False
+      example: "Seba"
+    taxMoney:
+      type: float
+      required: False
+      example: 465.0853

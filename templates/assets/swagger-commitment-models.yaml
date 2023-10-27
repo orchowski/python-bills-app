@@ -1,0 +1,39 @@
+CommitmentListItem:
+  type: "object"
+  properties:
+    id:
+      type: string
+      example: 358a8ae9-ddc4-4b51-842b-dbb034be8784
+    amount:
+      type: number
+      example: 100.99
+    unit:
+      type: string
+      example: USD
+    title:
+      type: string
+      example: "Flat rent"
+    description:
+      type: string
+      example: "Flat in warsaw"
+    creationDate:
+      type: string
+      example: "2022-02-14T19:43:46"
+    modificationDate:
+      type: string
+      example: "2022-02-14T19:43:46"
+    startDate:
+      type: string
+      example: "2022-02-02"
+    repeatPeriod:
+      type: string
+      example: WEEK
+    walletId:
+      type: string
+      example: 123e4567-e89b-12d3-a456-426614174000
+    active:
+      type: boolean
+      example: True
+    everyPeriod:
+      type: int
+      example: 2

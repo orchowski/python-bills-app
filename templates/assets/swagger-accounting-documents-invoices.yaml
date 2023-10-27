@@ -1,0 +1,23 @@
+post:
+  tags:
+    - "accounting_documents"
+    - "invoices"
+  operationId: "addInvoice"
+  responses:
+    "201":
+      description: "Invoice added: id returned"
+      schema:
+        type: object
+        properties:
+          accountingDocumentId:
+            type: string
+            example: 123e4567-e89b-12d3-a456-426614174000
+  consumes:
+    - "application/json"
+  parameters:
+    - in: "body"
+      name: "body"
+      required:
+        - "amount"
+      schema:
+        $ref: "swagger-accounting-documents-models.yaml#/AddInvoiceRequest"

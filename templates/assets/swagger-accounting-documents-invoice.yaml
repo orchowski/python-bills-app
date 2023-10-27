@@ -1,0 +1,40 @@
+put:
+  tags:
+    - "accounting_documents"
+    - "invoices"
+  operationId: "changeInvoice"
+  responses:
+    "204":
+      description: "change invoice details success"
+  consumes:
+    - "application/json"
+  parameters:
+    - name: "invoice_id"
+      in: "path"
+      description: "id of invoice tp change"
+      required: true
+      type: "string"
+    - in: "body"
+      name: "body"
+      schema:
+        $ref: "swagger-accounting-documents-models.yaml#/ChangeInvoiceDetails"
+post:
+  tags:
+    - "accounting_documents"
+    - "invoices"
+  operationId: "changeInvoice"
+  responses:
+    "204":
+      description: "change invoice details success"
+  consumes:
+    - "application/json"
+  parameters:
+    - name: "invoice_id"
+      in: "path"
+      description: "id of invoice tp change"
+      required: true
+      type: "string"
+    - in: "body"
+      name: "body"
+      schema:
+        $ref: "swagger-accounting-documents-models.yaml#/ChangeInvoiceDetails"
